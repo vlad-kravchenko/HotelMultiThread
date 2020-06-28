@@ -1,0 +1,26 @@
+﻿<Window x:Class="HotelMultiThread.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelMultiThread"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        SizeChanged="Window_SizeChanged"
+        Title="Hotel" Height="400" Width="800" MinWidth="600" MinHeight="300">
+    <Grid Name="Container">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Name="Start" Click="Start_Click" Margin="5,5,5,5">Start simulation</Button>
+            <TextBlock Text="Current date:" Margin="5,5,5,5"></TextBlock>
+            <TextBlock Name="tbDate" Text=" " Margin="5,5,5,5"></TextBlock>
+        </StackPanel>       
+
+        <Grid Name="MainGrid" Grid.Row="1" ShowGridLines="True"></Grid>
+    </Grid>
+</Window>
